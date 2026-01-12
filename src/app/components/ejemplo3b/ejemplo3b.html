@@ -1,0 +1,20 @@
+<!-- Recorrer con directiva @for (moderna) -->
+<!-- @empty -> si la lista está vacía -->
+<h1>Lista de profesores (forma moderna)</h1>
+@for(profe of profesores; track profe){
+    <li>{{profe}}</li>
+}@empty{
+    <p>No hay profesores</p>
+}
+<br>
+<h1>Lista de productos (forma moderna)</h1>
+@for(producto of productos; track producto){
+    <li>Nombre: {{producto.nombre}}, Precio: {{producto.precio}}</li>
+}@empty{
+    <li>No hay productos</li>
+}
+
+<h1>Datos del usuario</h1>
+@for(dato of usuario | keyvalue; track dato.key){
+    <li>{{dato.key}} {{dato.value}}</li>
+}
