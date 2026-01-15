@@ -1,0 +1,13 @@
+<!-- Crea un componente(ejercicio01) Angular que dada una lista de numeros(array)
+Muestra (en el template) los impares
+Y los superiores a 100 los mostraras de color rojo -->
+<h2>Listar números impares</h2>
+<ul>
+    @for(num of numeros; track num){
+        @if(!isEven(num)){
+            <li [ngClass]="{'text-red-600':num>100}">{{num}}</li>
+        }
+    }@empty{
+        <p>Array vacío</p>
+    }
+</ul>

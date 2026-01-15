@@ -1,0 +1,8 @@
+<div>Personajes de Rick and Morty</div>
+
+@for(personaje of personajes; track personaje){
+    <p>{{personaje.name}}</p>
+    <img src={{personaje.image}}s/>
+}@empty {
+    <p>No hay personajes disponibles</p>
+}

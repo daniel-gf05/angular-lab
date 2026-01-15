@@ -1,0 +1,12 @@
+<!-- Crea un formulario donde el usuario pueda introducir altura y peso.
+ Cuando el formulario se envíe, se mostrará el IMC de esa persona -->
+<div class="flex-col justify-center">
+    <form (ngSubmit)="calcular()">
+        <label>Introduce la altura</label>
+        <input type="text" name="altura" [(ngModel)]="altura">
+        <label>Introduce la peso</label>
+        <input type="text" name="peso" [(ngModel)]="peso">
+        <button>Enviar</button>
+        @if(imc > 0){<p>Tu IMC es: {{imc}}</p>}
+    </form>
+</div>
